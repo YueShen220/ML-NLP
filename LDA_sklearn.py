@@ -59,7 +59,7 @@ data_vectorized = vectorizer.fit_transform(data_lemmatized)
 # Build LDA Model
 lda_model = LatentDirichletAllocation(n_components=10,               # Number of topics
                                       max_iter=10,               # Max learning iterations
-                                      learning_method='online',   
+                                      learning_method='online',   # less acuurate at start but can process big data
                                       random_state=100,          # Random state
                                       batch_size=128,            # n docs in each learning iter
                                       evaluate_every = -1,       # compute perplexity every n iters, default: Don't
